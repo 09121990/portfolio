@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulbul Ahmed | Data Analyst Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #1e293b;
+            --secondary-color: #3b82f6;
+            --text-color: #334155;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .job-company {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .job-date {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .edu-cert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .grid-item {
+            padding: 12px;
+            border-left: 3px solid var(--border-color);
+        }
+
+        .grid-item:hover {
+            border-left-color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Bulbul Ahmed</h1>
+        <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 15px;">Data Analyst</p>
+        <div class="contact-info">
+            <span>📍 Sherpur, Bangladesh</span>
+            <span>📱 <a href="tel:+8801517075336">01517075336</a></span>
+            <span>✉️ <a href="mailto:bulbulbkash@gmail.com">bulbulbkash@gmail.com</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Career Objective</h2>
+        <p>Results-driven Data Analyst with over 6 years of experience in data management, visualization, and automation, eager to apply advanced skills in SQL, DAX, Python, and tools such as Power BI and Apache Superset to solve complex business problems, optimize reporting processes, and drive strategic outcomes.</p>
+    </section>
+
+    <section>
+        <h2>Key Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages & Scripting</h3>
+                <p>SQL, Python, R, DAX, M Code, JavaScript / Apps Script, BigQuery</p>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <p>Power BI, Power Query, Excel, Google Sheets, Looker Studio, Metabase, Apache Superset, Docker</p>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & Core Analytics</h3>
+                <p>AWS, GCP (Fundamentals), Data Modeling, ETL, Dashboard Development, Statistical Analysis, Data Integration, Automation</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Assistant Manager – Data Analytics</span>
+                <span class="job-date">Feb 2025 – Present</span>
+            </div>
+            <div class="job-company">Laser Treat Limited, Gulshan</div>
+            <ul>
+                <li>Optimized SQL queries for enhanced data retrieval performance.</li>
+                <li>Automated data transfer to Google Sheets using Python.</li>
+                <li>Maintained and updated Apache Superset dashboards.</li>
+                <li>Developed real-time dashboards to monitor KPIs: wait times, cancellations, satisfaction, patient flow.</li>
+                <li>Analyzed patient satisfaction, retention, and service performance.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Officer – MIS</span>
+                <span class="job-date">Aug 2023 – Jan 2025</span>
+            </div>
+            <div class="job-company">T.K. Group of Industries</div>
+            <ul>
+                <li>Built applications for secondary sales data collection using HTML, CSS, JavaScript.</li>
+                <li>Performed data modeling and retrieval using SQL and DAX.</li>
+                <li>Developed synchronization reports integrating Tally, Excel, and ERP data.</li>
+                <li>Conducted ETL processes using Power Query; visualized data in Looker Studio and Power BI.</li>
+                <li>Monitored sales performance, distributor stock movements, and field force KPIs.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Officer – MIS</span>
+                <span class="job-date">Aug 2021 – Jul 2023</span>
+            </div>
+            <div class="job-company">SEBL I DX Group, Gulshan</div>
+            <ul>
+                <li>Managed ERP customization and implementation.</li>
+                <li>Generated PO, GRN, PR, FG, SR, and stock transfer reports monthly/annually.</li>
+                <li>Analyzed primary/secondary sales, shipment, collection, and growth contributions.</li>
+                <li>Developed forecasting models, dashboards, and performance charts.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Depot In-Charge</span>
+                <span class="job-date">Jan 2020 – Aug 2021</span>
+            </div>
+            <div class="job-company">AR Malik Seeds (Pvt.) Ltd.</div>
+            <ul>
+                <li>Managed accounts, inventory, transport, and warehouse operations.</li>
+                <li>Prepared daily/monthly product-wise statements and inventory reports.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="edu-cert-grid">
+            <div class="grid-item">
+                <strong>Diploma in Database Design & Development</strong> — IDB-BISEW IT Scholarship Project (2017) <br>
+                <small>Oracle Certified Professional</small>
+            </div>
+            <div class="grid-item">
+                <strong>Master of Social Science (Social Work)</strong> — University of Dhaka (2014) <br>
+                <small>CGPA: 2.9/4</small>
+            </div>
+            <div class="grid-item">
+                <strong>Kamil (Tafsir)</strong> — Islamic University (2013) <br>
+                <small>CGPA: 3.75/5</small>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <div class="edu-cert-grid">
+            <div class="grid-item">
+                <strong>Data Science and Business Analytics</strong> — Academy of Business Professionals (2024–2025)
+            </div>
+            <div class="grid-item">
+                <strong>Python & R for Data Analysis</strong> — Academy of Business Professionals (2024)
+            </div>
+            <div class="grid-item">
+                <strong>Oracle Certified Professional (OCP)</strong> — Oracle University (2015–2017)
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
