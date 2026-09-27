@@ -1,0 +1,69 @@
+1. Start MySQL
+~/mysql/server/bin/mysqld \
+  --basedir=$HOME/mysql/server \
+  --datadir=$HOME/mysql/data \
+  --socket=$HOME/mysql/mysql.sock \
+  --port=3306 \
+  --bind-address=127.0.0.1 \
+  --console
+
+Keep this terminal open.
+
+2. Connect to MySQL from another WSL terminal
+~/mysql/server/bin/mysql \
+  --socket=$HOME/mysql/mysql.sock \
+  -u root -p
+
+Enter your MySQL root password.
+
+3. Connect phpMyAdmin to this MySQL
+
+If phpMyAdmin is already installed, its configuration should point to:
+
+Host:     127.0.0.1
+Port:     3306
+User:     root
+Password: your MySQL password
+
+Then open phpMyAdmin in your browser, typically:
+
+http://localhost/phpmyadmin
+If phpMyAdmin is running on Windows
+
+If your phpMyAdmin is Windows/XAMPP phpMyAdmin while MySQL is running inside WSL, 127.0.0.1:3306 may not work depending on your WSL networking setup.
+
+First test from WSL:
+
+ss -tlnp | grep 3306
+
+You should see:
+
+127.0.0.1:3306
+
+Then test MySQL TCP connection:
+
+~/mysql/server/bin/mysql -h 127.0.0.1 -P 3306 -u root -p
+
+If that works, your MySQL server is accepting TCP connections.
+
+Recommended first step: start MySQL with the command in Step 1, then run the TCP test in Step 2. If that works, I'll give you the exact config.inc.php settings for phpMyAdmin.
+====================================================================================
+If you want MySQL to run in the background
+#Bash
+~/mysql/server/bin/mysqld \
+  --basedir=$HOME/mysql/server \
+  --datadir=$HOME/mysql/data \
+  --socket=$HOME/mysql/mysql.sock \
+  --port=3306 \
+  --bind-address=127.0.0.1 \
+  > ~/mysql/mysql.log 2>&1 &
+
+Check that it's running:
+ps aux | grep '[m]ysqld'
+And:
+ss -tln | grep 3306
+Then you can use the same MySQL connection command:
+
+~/mysql/server/bin/mysql -h 127.0.0.1 -P 3306 -u root -p
+
+For now, keep your current terminal open and use a second terminal. Your MySQL server is already running correctly.
